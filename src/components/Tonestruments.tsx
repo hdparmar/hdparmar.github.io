@@ -73,6 +73,7 @@ const Tonestruments = () => {
                   variant="outline"
                   className="btn-rustic-hover"
                   onClick={() => window.open("https://tonestruments.com/beta", "_blank")}
+                  data-track-id="tonepad-beta-signup"
                 >
                   Sign up for beta test
                 </Button>
@@ -80,6 +81,7 @@ const Tonestruments = () => {
                   variant="default"
                   className="btn-rustic-hover bg-accent text-accent-foreground"
                   onClick={() => window.open("https://tonestruments.com", "_blank")}
+                  data-track-id="tonepad-learn-more"
                 >
                   <ExternalLink className="mr-2 h-4 w-4" />
                   Learn More

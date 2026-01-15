@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script>
+      // GitHub Pages SPA redirect
+      // Captures the current path and redirects to index.html with the path stored
+      const path = window.location.pathname;
+      const query = window.location.search;
+      const hash = window.location.hash;
+      
+      // Store the path in sessionStorage for the main app to read
+      sessionStorage.setItem('spa-redirect-path', path + query + hash);
+      
+      // Redirect to the root
+      window.location.replace('/');
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>

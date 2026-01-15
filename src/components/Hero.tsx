@@ -28,6 +28,7 @@ const Hero = () => {
               size="lg"
               className="btn-rustic-hover bg-primary text-primary-foreground border-2 border-primary"
               onClick={() => window.open("https://calendly.com/hdp-1798/30min", "_blank")}
+              data-track-id="hero-online-meet"
             >
               <Calendar className="mr-2 h-5 w-5" />
               Online Meet
@@ -37,6 +38,7 @@ const Hero = () => {
               variant="outline"
               className="btn-rustic-hover border-2"
               onClick={() => window.open("https://calendly.com", "_blank")}
+              data-track-id="hero-fika"
             >
               <Coffee className="mr-2 h-5 w-5" />
               In Stockholm? Grab a fika!
