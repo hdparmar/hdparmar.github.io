@@ -8,7 +8,7 @@ const Hero = () => {
         <div className="animate-fade-in space-y-4">
           <div className="flex items-center gap-3 md:gap-4">
             <img
-              src="/src/assets/logo/name_logomark.png"
+              src="/name_logomark.png"
               alt="Harshdeep Parmar"
               className="w-14 h-14 md:w-16 md:h-16 object-contain flex-shrink-0"
             />
