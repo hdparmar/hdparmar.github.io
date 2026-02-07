@@ -1,6 +1,6 @@
 const Thesis = () => {
   return (
-    <section className="py-16 px-6">
+    <section id="research" className="py-16 px-6">
       <div className="container max-w-4xl mx-auto">
         <h2 className="text-lg font-semibold text-foreground mb-8">
           Research Project
@@ -18,14 +18,24 @@ const Thesis = () => {
                 </p>
               </div>
             </div>
-            <a
-              href="https://github.com/hdparmar/Tradifusion"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-accent hover:underline mt-2 inline-block"
-            >
-              View on GitHub →
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 mt-2">
+              <a
+                href="https://github.com/hdparmar/Tradifusion"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-accent hover:underline"
+              >
+                View on GitHub →
+              </a>
+              <a
+                href="https://hdparmar.github.io/Tradifusion/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-accent hover:underline"
+              >
+                Listen to generated samples →
+              </a>
+            </div>
           </div>
         </div>
 

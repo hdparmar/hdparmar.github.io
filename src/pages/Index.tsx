@@ -4,6 +4,7 @@ import Thesis from "@/components/Thesis";
 import Writing from "@/components/Writing";
 import Photography from "@/components/Photography";
 import Footer from "@/components/Footer";
+import ScrollIndicator from "@/components/ScrollIndicator";
 import { useAnalytics } from "@/hooks/useAnalytics";
 
 const Index = () => {
@@ -12,6 +13,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <ScrollIndicator />
       <Hero />
       <Tonestruments />
       <Thesis />
