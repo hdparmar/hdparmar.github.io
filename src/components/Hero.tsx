@@ -3,30 +3,30 @@ import { Calendar, Coffee } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="about" className="min-h-[70vh] flex items-center justify-center pt-4 px-6">
+    <section id="about" className="min-h-[60vh] flex items-center justify-center pt-2 px-4 md:px-6">
       <div className="container max-w-4xl mx-auto">
         <div className="animate-fade-in space-y-4">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 md:gap-4">
             <img
-              src="/tab_picture.png"
+              src="/src/assets/logo/name_logomark.png"
               alt="Harshdeep Parmar"
-              className="w-12 h-12 rounded-full object-cover"
+              className="w-14 h-14 md:w-16 md:h-16 object-contain flex-shrink-0"
             />
             <div>
-              <h1 className="text-2xl md:text-3xl font-bold text-foreground mb-1">
+              <h1 className="text-xl md:text-3xl font-bold text-foreground mb-1">
                 Harshdeep Parmar
               </h1>
-              <p className="text-base text-muted-foreground">
+              <p className="text-sm md:text-base text-muted-foreground">
                 Tjena!
               </p>
             </div>
           </div>
 
-          <p className="text-base text-muted-foreground leading-relaxed max-w-2xl">
+          <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-2xl">
             I capture moments through a viewfinder, write about the ones I can't forget, and read about everything in between. Still figuring out the rest but hey, that's the fun part.
           </p>
 
-          <p className="text-base text-muted-foreground leading-relaxed max-w-2xl">
+          <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-2xl">
             Research-oriented entrepreneur specializing in embedded systems, edge computing, and secure partitioning. Currently developing tonepad helping you learn and make your first lo-fi drum song.
           </p>
 
