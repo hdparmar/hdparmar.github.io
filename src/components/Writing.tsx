@@ -33,19 +33,6 @@ const Writing = () => {
             </div>
           ))}
         </div>
-
-        <h2 className="text-lg font-semibold text-foreground mt-16 mb-8">
-          Current Read
-        </h2>
-
-        <div>
-          <h3 className="text-base font-medium text-foreground">
-            The Pragmatic Programmer
-          </h3>
-          <p className="text-sm text-muted-foreground mt-1">
-            by David Thomas & Andrew Hunt
-          </p>
-        </div>
       </div>
     </section>
   );

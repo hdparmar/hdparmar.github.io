@@ -1,5 +1,3 @@
-import { Heart } from "lucide-react";
-
 const Footer = () => {
   return (
     <footer className="py-12 px-6 border-t border-border">
@@ -7,10 +5,6 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <span>© {new Date().getFullYear()} Harshdeep Parmar</span>
-            <span>•</span>
-            <span className="flex items-center gap-1">
-              Built with <Heart className="h-4 w-4 text-accent fill-accent" /> in Stockholm
-            </span>
           </div>
 
           <div className="flex gap-6 text-sm">
