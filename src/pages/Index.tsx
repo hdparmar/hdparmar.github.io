@@ -12,13 +12,15 @@ const Index = () => {
   useAnalytics();
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background text-foreground transition-colors dark:bg-background dark:text-foreground">
       <ScrollIndicator />
       <Hero />
-      <Tonestruments />
-      <Thesis />
-      <Writing />
-      <Photography />
+      <main className="relative mx-auto w-full max-w-[44rem] px-5 sm:px-6">
+        <Tonestruments />
+        <Thesis />
+        <Writing />
+        <Photography />
+      </main>
       <Footer />
     </div>
   );

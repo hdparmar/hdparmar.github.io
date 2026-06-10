@@ -32,8 +32,8 @@ const ScrollIndicator = () => {
             }
         };
 
-        window.addEventListener("scroll", handleScroll);
-        handleScroll(); // Check initial position
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        handleScroll();
 
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
@@ -41,28 +41,29 @@ const ScrollIndicator = () => {
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
         if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
+            const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            element.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
         }
     };
 
     return (
-        <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col gap-3">
+        <nav aria-label="Section shortcuts" className="fixed right-6 top-1/2 z-50 hidden -translate-y-1/2 flex-col gap-3 md:flex">
             {sections.map((section, index) => (
                 <button
                     key={section.id}
                     onClick={() => scrollToSection(section.id)}
-                    className={`group relative w-3 h-3 rounded-full transition-all duration-300 ${activeSection === index
-                            ? "bg-accent scale-125"
-                            : "bg-muted-foreground/30 hover:bg-muted-foreground/60"
+                    className={`group relative h-6 w-3 border-l transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background ${activeSection === index
+                            ? "border-accent"
+                            : "border-muted-foreground/25 hover:border-muted-foreground/65"
                         }`}
                     aria-label={`Go to ${section.label}`}
                 >
-                    <span className="absolute right-6 top-1/2 -translate-y-1/2 px-2 py-1 bg-card border border-border rounded text-xs text-foreground opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                    <span className="pointer-events-none absolute right-6 top-1/2 -translate-y-1/2 whitespace-nowrap border-b border-border pb-0.5 text-xs font-light text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
                         {section.label}
                     </span>
                 </button>
             ))}
-        </div>
+        </nav>
     );
 };
 

@@ -322,7 +322,7 @@ const Analytics = () => {
                   <div key={range} className="text-center">
                     <div className="h-24 bg-muted rounded-lg flex items-end justify-center p-2">
                       <div
-                        className="bg-accent rounded w-full transition-all"
+                        className="bg-accent rounded w-full"
                         style={{
                           height: `${Math.max(10, (count / Math.max(...Object.values(data.sessionDistribution))) * 100)}%`,
                         }}
@@ -402,7 +402,7 @@ const Analytics = () => {
                           </div>
                           <div className="h-2 bg-muted rounded-full overflow-hidden">
                             <div
-                              className="h-full bg-accent rounded-full transition-all"
+                              className="h-full bg-accent rounded-full"
                               style={{ width: `${percentage}%` }}
                             />
                           </div>

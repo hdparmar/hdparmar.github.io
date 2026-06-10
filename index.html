@@ -14,6 +14,15 @@
   <meta property="og:description"
     content="Research-oriented computer scientist specializing in embedded systems, edge computing, and secure partitioning. Founder of Tonestruments AB." />
   <meta property="og:type" content="website" />
+  <script>
+    (function () {
+      const theme = localStorage.getItem('hdp-theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const useDark = theme === 'dark' || (!theme && prefersDark);
+      document.documentElement.classList.toggle('dark', useDark);
+      document.documentElement.style.colorScheme = useDark ? 'dark' : 'light';
+    })();
+  </script>
 </head>
 
 <body>

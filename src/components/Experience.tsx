@@ -1,5 +1,3 @@
-import { Card } from "@/components/ui/card";
-
 const experiences = [
   {
     title: "Embedded Software Developer",
@@ -37,46 +35,45 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 px-6">
-      <div className="container max-w-4xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-foreground">
+    <section id="experience" className="mx-auto w-full max-w-[44rem] px-5 py-12 sm:px-6 md:py-14">
+      <div className="border-t border-border pt-5">
+        <h2 className="mb-6 text-xl font-semibold text-foreground md:text-2xl">
           Experience
         </h2>
 
-        <div className="space-y-8">
-          {experiences.map((exp, index) => (
-            <Card
-              key={index}
-              className="p-6 md:p-8 hover:shadow-lg transition-all duration-300 border-border animate-slide-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+        <div className="divide-y divide-border/80 border-b border-border/80">
+          {experiences.map((exp) => (
+            <article
+              key={`${exp.company}-${exp.period}`}
+              className="grid gap-3 py-4 motion-safe:animate-fade-in motion-reduce:animate-fade-in-reduced md:grid-cols-[7rem_minmax(0,1fr)] md:gap-5"
             >
-              <div className="space-y-4">
+              <p className="text-sm font-medium tabular-nums text-muted-foreground">{exp.period}</p>
+              <div className="min-w-0 space-y-3">
                 <div>
-                  <h3 className="text-2xl font-semibold text-primary">
+                  <h3 className="text-base font-semibold leading-6 text-foreground">
                     {exp.title}
                     {exp.type && (
-                      <span className="text-sm text-muted-foreground ml-2">
+                      <span className="ml-2 text-sm font-light text-muted-foreground">
                         ({exp.type})
                       </span>
                     )}
                   </h3>
-                  <p className="text-lg text-accent font-medium">{exp.company}</p>
-                  <p className="text-sm text-muted-foreground mt-1">{exp.period}</p>
+                  <p className="text-sm font-medium text-accent">{exp.company}</p>
                 </div>
 
-                <ul className="space-y-2">
+                <ul className="space-y-1.5">
                   {exp.highlights.map((highlight, idx) => (
                     <li
                       key={idx}
-                      className="text-muted-foreground flex items-start gap-2"
+                      className="flex items-start gap-2 text-sm font-light leading-6 text-muted-foreground"
                     >
-                      <span className="text-accent mt-1.5">•</span>
+                      <span className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-accent" aria-hidden="true" />
                       <span>{highlight}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-            </Card>
+            </article>
           ))}
         </div>
       </div>

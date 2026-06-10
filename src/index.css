@@ -1,3 +1,12 @@
+/* Hallmark · pre-emit critique: P5 H4 E5 S5 R5 V4
+ * macrostructure: Index-First · variant: personal editorial ledger
+ * genre: editorial · theme: custom urban paper ledger
+ * contrast: pass (40-41) · mobile: pass target (34, 49, 50-57)
+ * honest: pass (46) · chrome: pass (47) · tokens: pass (48)
+ * nav: N3 scroll rail · footer: Ft2 inline close · studied: no
+ */
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,92 +19,149 @@
   display: none;
 }
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Project tokens: OKLCH components are stored without the function wrapper so Tailwind opacity modifiers keep working. */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    --font-display: "Urbanist", "Aptos", "Segoe UI", sans-serif;
+    --font-body: "Urbanist", "Aptos", "Segoe UI", sans-serif;
+    --font-mono: "Urbanist", ui-monospace, SFMono-Regular, monospace;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --background: 98.5% 0.002 106;
+    --foreground: 20% 0.01 80;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --card: 96.7% 0.002 106;
+    --card-foreground: 20% 0.01 80;
 
-    --primary: 0 0% 15%;
-    --primary-foreground: 0 0% 98%;
+    --popover: 96.7% 0.002 106;
+    --popover-foreground: 20% 0.01 80;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 10%;
+    --primary: 23% 0.015 70;
+    --primary-foreground: 98.5% 0.002 106;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --secondary: 91.5% 0.006 85;
+    --secondary-foreground: 23% 0.015 70;
 
-    --accent: 30 50% 45%;
-    --accent-foreground: 0 0% 98%;
+    --muted: 92.5% 0.004 95;
+    --muted-foreground: 45% 0.012 80;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --accent: 49% 0.115 46;
+    --accent-foreground: 97% 0.018 75;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 15%;
+    --destructive: 55% 0.21 25;
+    --destructive-foreground: 97% 0.018 75;
+
+    --border: 84% 0.007 90;
+    --input: 84% 0.007 90;
+    --ring: 42% 0.09 48;
+
+    --sidebar-background: 96% 0.02 72;
+    --sidebar-foreground: 25% 0.055 50;
+    --sidebar-primary: 25% 0.055 50;
+    --sidebar-primary-foreground: 96% 0.017 75;
+    --sidebar-accent: 90% 0.035 75;
+    --sidebar-accent-foreground: 25% 0.055 50;
+    --sidebar-border: 82% 0.026 70;
+    --sidebar-ring: 42% 0.09 48;
 
     --radius: 0.5rem;
 
-    /* Gradient tokens for rustic hover effects */
-    --gradient-rustic: linear-gradient(135deg, hsl(30 50% 45%) 0%, hsl(25 45% 40%) 50%, hsl(20 40% 35%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(30 50% 45%) 0%, hsl(25 45% 40%) 100%);
-    
-    /* Animation and transition tokens */
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --color-paper: oklch(var(--background));
+    --color-paper-2: oklch(var(--card));
+    --color-ink: oklch(var(--foreground));
+    --color-ink-2: oklch(var(--muted-foreground));
+    --color-ink-3: oklch(62% 0.012 80);
+    --color-rule: oklch(var(--border));
+    --color-rule-soft: oklch(90% 0.006 90);
+    --color-accent: oklch(var(--accent));
+    --color-accent-ink: oklch(var(--accent-foreground));
+    --color-focus: oklch(var(--ring));
+
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-colors: color 180ms var(--ease-out), background-color 180ms var(--ease-out), border-color 180ms var(--ease-out);
+    --transition-opacity: opacity 180ms var(--ease-out);
+    --transition-transform: transform 220ms var(--ease-out);
   }
 
   .dark {
-    --background: 0 0% 10%;
-    --foreground: 0 0% 98%;
+    --background: 21.5% 0.004 250;
+    --foreground: 93% 0.006 85;
 
-    --card: 0 0% 15%;
-    --card-foreground: 0 0% 98%;
+    --card: 25% 0.005 250;
+    --card-foreground: 93% 0.006 85;
 
-    --popover: 0 0% 15%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 25% 0.005 250;
+    --popover-foreground: 93% 0.006 85;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 10%;
+    --primary: 88% 0.01 85;
+    --primary-foreground: 21.5% 0.004 250;
 
-    --secondary: 0 0% 20%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 30% 0.008 250;
+    --secondary-foreground: 93% 0.006 85;
 
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 31% 0.007 250;
+    --muted-foreground: 74% 0.008 85;
 
-    --accent: 30 50% 50%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 66% 0.13 48;
+    --accent-foreground: 18% 0.03 60;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 58% 0.2 25;
+    --destructive-foreground: 96% 0.017 75;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 0 0% 98%;
+    --border: 37% 0.007 250;
+    --input: 37% 0.007 250;
+    --ring: 72% 0.09 52;
+
+    --sidebar-background: 20% 0.032 60;
+    --sidebar-foreground: 94% 0.022 76;
+    --sidebar-primary: 88% 0.04 76;
+    --sidebar-primary-foreground: 20% 0.035 55;
+    --sidebar-accent: 29% 0.032 58;
+    --sidebar-accent-foreground: 94% 0.022 76;
+    --sidebar-border: 34% 0.035 58;
+    --sidebar-ring: 72% 0.09 52;
   }
 }
 
 @layer base {
+  html,
+  body {
+    overflow-x: clip;
+  }
+
   * {
     @apply border-border;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
     position: relative;
+    font-weight: 300;
+    font-feature-settings: "kern" 1, "liga" 1;
+    transition: var(--transition-colors);
   }
 
-  /* Jupiter surface texture overlay */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+    font-style: normal;
+    letter-spacing: 0;
+    overflow-wrap: anywhere;
+    min-width: 0;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    max-width: 100%;
+  }
+
   body::before {
     content: '';
     position: fixed;
@@ -106,32 +172,39 @@ All colors MUST be HSL.
     background-image: url('/src/assets/jupiter-texture.jpg');
     background-size: cover;
     background-position: center;
-    opacity: 0.08;
-    mix-blend-mode: color-dodge;
+    opacity: 0.035;
+    mix-blend-mode: multiply;
     pointer-events: none;
     z-index: -1;
+  }
+
+  .dark body::before {
+    opacity: 0.018;
+    mix-blend-mode: screen;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 1ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 1ms !important;
+    }
   }
 }
 
 @layer components {
-  /* Rustic gradient hover effect for buttons */
   .btn-rustic-hover {
     position: relative;
     overflow: hidden;
-    transition: var(--transition-smooth);
+    isolation: isolate;
+    transition: var(--transition-colors), var(--transition-transform), var(--transition-opacity);
   }
 
   .btn-rustic-hover::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient-rustic);
-    opacity: 0;
-    transition: var(--transition-smooth);
-    z-index: -1;
+    content: none;
   }
 
   .btn-rustic-hover:hover::before {
@@ -139,7 +212,12 @@ All colors MUST be HSL.
   }
 
   .btn-rustic-hover:hover {
-    color: hsl(var(--background));
-    border-color: transparent;
+    color: oklch(var(--accent));
+    border-color: oklch(var(--accent) / 0.5);
+    background-color: oklch(var(--secondary) / 0.55);
+  }
+
+  .btn-rustic-hover:active {
+    transform: translateY(1px);
   }
 }

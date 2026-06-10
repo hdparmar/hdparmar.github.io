@@ -1,98 +1,99 @@
-import { Button } from "@/components/ui/button";
-import { Calendar, Coffee } from "lucide-react";
+import DarkModeToggle from "@/components/DarkModeToggle";
+import { ArrowUpRight } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="about" className="min-h-[60vh] flex items-center justify-center pt-2 px-4 md:px-6">
-      <div className="container max-w-4xl mx-auto">
-        <div className="animate-fade-in space-y-4">
-          <div className="flex items-center gap-3 md:gap-4">
-            <img
-              src="/name_logomark.png"
-              alt="Harshdeep Parmar"
-              className="w-14 h-14 md:w-16 md:h-16 object-contain flex-shrink-0"
-            />
-            <div>
-              <h1 className="text-xl md:text-3xl font-bold text-foreground mb-1">
-                Harshdeep Parmar
-              </h1>
-              <p className="text-sm md:text-base text-muted-foreground">
-                Tjena!
-              </p>
-            </div>
+    <section id="about" className="mx-auto flex min-h-[52vh] w-full max-w-[44rem] items-center px-5 pt-16 sm:px-6 md:pt-20">
+      <div className="w-full">
+        <div className="space-y-6 motion-safe:animate-fade-in motion-reduce:animate-fade-in-reduced">
+          <div className="border-b border-border/70 pb-5 dark:border-border/60">
+            <h1 className="mb-1 text-[2.35rem] font-bold leading-none text-foreground md:text-[3.35rem]">
+              Harshdeep Parmar
+            </h1>
+            <p className="mb-4 text-sm font-light italic text-muted-foreground md:text-base">
+              /ˈhɑːrʃ.diːp pɑːr.mɑːr/
+            </p>
           </div>
 
-          <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-2xl">
-            I capture moments through a viewfinder, write about the ones I can't forget, and read about everything in between. Still figuring out the rest but hey, that's the fun part.
+          <p className="max-w-[68ch] text-base font-light leading-7 text-muted-foreground">
+            I am the founder of{" "}
+            <a
+              href="https://tonestruments.se"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-baseline font-normal text-foreground underline decoration-border underline-offset-4 transition-colors hover:text-accent hover:decoration-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            >
+              tonestruments.se
+              <ArrowUpRight className="ml-0.5 inline h-3.5 w-3.5 translate-y-0.5" aria-hidden="true" />
+            </a>{" "}
+            where I am trying to figure out if people who want to get the intuition of beat making and why certain songs make them feel the way it does, are able to build a song themselves to express themselves in a musical way.
           </p>
 
-          <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-2xl">
-            Research-oriented entrepreneur specializing in embedded systems, edge computing, and secure partitioning. Currently developing tonepad helping you learn and make your first lo-fi drum song.
+          <p className="max-w-[68ch] text-base font-light leading-7 text-muted-foreground">
+            I am interested in making a musical instrument that lowers the barriers of making music for non-experts, and I am learning a lot on this path, if you would like to collaborate or talk about it, hit me up @{" "}
+            <a
+              href="mailto:hello@tonestruments.se"
+              className="inline-flex items-baseline font-normal text-foreground underline decoration-border underline-offset-4 transition-colors hover:text-accent hover:decoration-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            >
+              hello@tonestruments.se
+              <ArrowUpRight className="ml-0.5 inline h-3.5 w-3.5 translate-y-0.5" aria-hidden="true" />
+            </a>.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button
-              size="lg"
-              className="btn-rustic-hover bg-primary text-primary-foreground border-2 border-primary"
-              onClick={() => window.open("https://calendly.com/hdp-1798/30min", "_blank")}
-              data-track-id="hero-online-meet"
-            >
-              <Calendar className="mr-2 h-5 w-5" />
-              Online Meet
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="btn-rustic-hover border-2"
-              onClick={() => window.open("https://calendly.com", "_blank")}
-              data-track-id="hero-fika"
-            >
-              <Coffee className="mr-2 h-5 w-5" />
-              In Stockholm? Grab a fika!
-            </Button>
-          </div>
+          <p className="max-w-[68ch] text-base font-light leading-7 text-muted-foreground">
+            Apart from that, I read literature and sometimes when I feel like it write some myself, and I tend to capture images on which I can tell stories, and sometimes I play chess, and a lot of time cook good food!
+          </p>
 
-          <div className="pt-4 space-y-3">
-            <div className="flex flex-wrap gap-4 text-sm">
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-accent transition-colors"
-              >
-                LinkedIn
-              </a>
-              <span className="text-muted-foreground">•</span>
-              <a
-                href="https://github.com/hdparmar"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-accent transition-colors"
-              >
-                GitHub
-              </a>
+          <div className="space-y-3 pt-2">
+            <div className="flex items-center justify-between gap-4 text-sm">
+              <div className="flex min-w-0 flex-wrap items-center gap-4">
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-light text-muted-foreground underline decoration-border underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
+                >
+                  LinkedIn
+                </a>
+                <span className="font-extralight text-muted-foreground">/</span>
+                <a
+                  href="https://github.com/hdparmar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-light text-muted-foreground underline decoration-border underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
+                >
+                  GitHub
+                </a>
+              </div>
+              <DarkModeToggle className="ml-auto" />
             </div>
 
-            <div className="flex flex-wrap gap-6 text-sm pt-2 border-t border-border/50">
+            <nav aria-label="Portfolio sections" className="flex flex-wrap gap-x-6 gap-y-2 border-t border-border/60 pt-3 text-sm dark:border-border/50">
               <a
                 href="#tonestruments"
-                className="text-foreground hover:text-accent transition-colors font-medium"
+                className="font-medium text-foreground transition-colors hover:text-accent"
               >
-                tonestruments
+                TonePad
+              </a>
+              <a
+                href="#research"
+                className="font-medium text-foreground transition-colors hover:text-accent"
+              >
+                Research
               </a>
               <a
                 href="#writing"
-                className="text-foreground hover:text-accent transition-colors font-medium"
+                className="font-medium text-foreground transition-colors hover:text-accent"
               >
                 Writing
               </a>
               <a
                 href="#photography"
-                className="text-foreground hover:text-accent transition-colors font-medium"
+                className="font-medium text-foreground transition-colors hover:text-accent"
               >
                 Photography
               </a>
-            </div>
+            </nav>
           </div>
         </div>
       </div>

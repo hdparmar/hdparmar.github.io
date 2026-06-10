@@ -1,4 +1,7 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
+
+const oklch = (variable: string) => `oklch(var(${variable}) / <alpha-value>)`;
 
 export default {
   darkMode: ["class"],
@@ -14,49 +17,55 @@ export default {
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        border: oklch("--border"),
+        input: oklch("--input"),
+        ring: oklch("--ring"),
+        background: oklch("--background"),
+        foreground: oklch("--foreground"),
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: oklch("--primary"),
+          foreground: oklch("--primary-foreground"),
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: oklch("--secondary"),
+          foreground: oklch("--secondary-foreground"),
         },
         destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
+          DEFAULT: oklch("--destructive"),
+          foreground: oklch("--destructive-foreground"),
         },
         muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: oklch("--muted"),
+          foreground: oklch("--muted-foreground"),
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: oklch("--accent"),
+          foreground: oklch("--accent-foreground"),
         },
         popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
+          DEFAULT: oklch("--popover"),
+          foreground: oklch("--popover-foreground"),
         },
         card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+          DEFAULT: oklch("--card"),
+          foreground: oklch("--card-foreground"),
         },
         sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
+          DEFAULT: oklch("--sidebar-background"),
+          foreground: oklch("--sidebar-foreground"),
+          primary: oklch("--sidebar-primary"),
+          "primary-foreground": oklch("--sidebar-primary-foreground"),
+          accent: oklch("--sidebar-accent"),
+          "accent-foreground": oklch("--sidebar-accent-foreground"),
+          border: oklch("--sidebar-border"),
+          ring: oklch("--sidebar-ring"),
         },
+      },
+      fontFamily: {
+        sans: ["var(--font-body)", "Aptos", "Segoe UI", "sans-serif"],
+        body: ["var(--font-body)", "Aptos", "Segoe UI", "sans-serif"],
+        display: ["var(--font-display)", "Aptos", "Segoe UI", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "SFMono-Regular", "monospace"],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -99,6 +108,18 @@ export default {
             opacity: "1",
             transform: "translateX(0)"
           }
+        },
+        "fade-in-reduced": {
+          "0%, 100%": {
+            opacity: "1",
+            transform: "none"
+          }
+        },
+        "slide-in-reduced": {
+          "0%, 100%": {
+            opacity: "1",
+            transform: "none"
+          }
         }
       },
       animation: {
@@ -106,8 +127,10 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.6s ease-out",
         "slide-in": "slide-in 0.5s ease-out",
+        "fade-in-reduced": "fade-in-reduced 1ms linear",
+        "slide-in-reduced": "slide-in-reduced 1ms linear",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate],
 } satisfies Config;

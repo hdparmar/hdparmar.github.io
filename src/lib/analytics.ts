@@ -1,5 +1,11 @@
 import { supabase } from "@/integrations/supabase/client";
 
+const isLocalAnalyticsDisabled = (): boolean => {
+  if (typeof window === "undefined") return true;
+
+  return import.meta.env.DEV || window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+};
+
 // Generate a unique session ID
 export const generateSessionId = (): string => {
   return `${Date.now()}-${Math.random().toString(36).substring(2, 15)}`;
@@ -38,6 +44,10 @@ export const getReferrer = (): string => {
 
 // Call the edge function for analytics operations
 const callAnalyticsEdge = async (action: string, data: Record<string, unknown>): Promise<boolean> => {
+  if (isLocalAnalyticsDisabled()) {
+    return true;
+  }
+
   try {
     const { data: result, error } = await supabase.functions.invoke('track-analytics', {
       body: { action, data }
