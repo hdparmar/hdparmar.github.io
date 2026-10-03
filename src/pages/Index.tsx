@@ -21,15 +21,15 @@ const Index = () => {
 
         <div className="mt-9 flex flex-col gap-5 text-[17px] leading-[1.65]">
           <p>
-            I’m an embedded engineer in Stockholm. I write firmware for devices that listen: microphones, signal
-            processing, and small machine-learning models squeezed onto microcontrollers and embedded Linux.
+            I’m an embedded engineer in Stockholm. I build devices that sense the world and make sense of it on their
+            own: firmware, signal processing and small machine-learning models running at the edge, close to the sensor.
           </p>
           <p className="text-muted-foreground">
-            These days I’m building firmware for audio-reactive lighting for a client, making{" "}
+            These days I’m writing firmware for a client’s wireless lights that react to the room, making{" "}
             <a href="https://tonestruments.se" target="_blank" rel="noopener noreferrer" className="text-link">
               Nadilo
             </a>
-            , a game that teaches beat-making by ear, and learning embedded Linux on a Milk-V Duo.
+            , a game that teaches beat-making by ear, and learning embedded Linux on a RISC-V Milk-V Duo.
           </p>
           <p className="text-muted-foreground">I also shoot film and write.</p>
           <figure className="border-l border-accent/60 pl-4">

@@ -42,7 +42,7 @@ export const sides: Side[] = [
     tracks: [
       {
         id: "A1",
-        title: "Listening on 128 KB",
+        title: "A neural network in 128 KB",
         year: "2022–23",
         body: "Audio inference on an STM32L476: DMA, CMSIS-DSP and a FastGRNN model in plain C.",
       },
@@ -54,7 +54,7 @@ export const sides: Side[] = [
       },
       {
         id: "A3",
-        title: "Light that listens",
+        title: "Lights that sense the room",
         year: "2026",
         body: "ESP32 hub and satellite lights talking over ESP-NOW. Client work.",
       },
