@@ -1,70 +1,46 @@
-# Harshdeep Parmar - Portfolio
+# hdparmar.github.io
 
-Personal developer portfolio for Harshdeep Parmar, built as a narrow editorial ledger around music technology, research, writing, and photography.
+Personal site of Harshdeep Parmar: embedded engineer in Stockholm, plus film photographs and writing.
 
-Live site: [hdparmar.github.io](https://hdparmar.github.io)
+Live at [hdparmar.github.io](https://hdparmar.github.io).
 
-## Current State
+## Pages
 
-The homepage is a React/Vite single-page portfolio with a Hallmark-guided visual system:
+| Route | What's there |
+|---|---|
+| `/` | Intro, contact links, selected work as two "sides" (firmware / play and image), recent writing, a strip of four photographs |
+| `/photographs` | The film album: one frame per row at its own shape |
+| `/photographs/:slug` | A single frame with its facts, any writing linked to it, and ← → keyboard navigation |
+| `/writing`, `/writing/:slug` | Notes, poems and excerpts, each optionally paired with a photograph |
+| `/analytics`, `/analytics/login` | Private analytics dashboard (Supabase) |
 
-- Soft off-white light mode and charcoal dark mode
-- Urbanist as the global font family
-- Narrow `44rem` editorial content column
-- Inline dark-mode toggle in the LinkedIn/GitHub row
-- Hero bio focused on [tonestruments.se](https://tonestruments.se), musical intuition, writing, photography, chess, and food
-- Footer with live Stockholm local time using the `Europe/Stockholm` timezone
+## Content
 
-## Public Sections
+Everything you'd normally edit is in `src/content/`:
 
-- **Hero / Bio** - Name, pronunciation guide, personal bio, linked `tonestruments.se`, linked `hello@tonestruments.se`, LinkedIn, GitHub, dark-mode toggle, and section navigation.
-- **TonePad** - Featured `TonePad Beat Blocks` project section with tagline, description, checklist, and links to `tonestruments.se`.
-- **Research** - Academic research project and education history.
-- **Writing** - Drafts, notes, and essays in a ledger-row format.
-- **Photography** - Film photography entries with expandable story text and load-more behavior.
-- **Footer** - Copyright plus `📍 Stockholm, Sweden · HH:MM CEST/CET`, updated every minute.
+- `site.ts`: contact links, the quote, and the Side A / Side B tracklist
+- `photographs.ts`: the album (order, captions, landing preview, footer photo)
+- `writing/*.md`: published writing as Markdown with a small front-matter header
 
-## Tech Stack
+Images live in `public/photographs/` (1600px) and `public/photographs/thumbs/` (640px).
 
-- **Framework:** React 18 + TypeScript
-- **Build Tool:** Vite
-- **Routing:** React Router
-- **Styling:** Tailwind CSS, OKLCH CSS tokens, shadcn/ui, Radix primitives
-- **Icons:** lucide-react
-- **Data/Admin:** Supabase integration for analytics routes
-- **Deployment:** GitHub Pages
+## Design
 
-## Important Files
+"Edge Print": warm paper and ink, Instrument Sans for text, IBM Plex Mono in burnt orange for frame numbers and metadata, a film-edge strip of frame numbers down the left on wide screens, and a footer photograph (Idrefjäll, Minolta 505si) that fades into the page. Light and dark themes, a single readable column, and layouts that stack on a phone.
 
-- [src/pages/Index.tsx](src/pages/Index.tsx) - Public homepage assembly
-- [src/components/Hero.tsx](src/components/Hero.tsx) - Bio, social links, section nav, inline dark-mode toggle
-- [src/components/DarkModeToggle.tsx](src/components/DarkModeToggle.tsx) - Persisted light/dark toggle
-- [src/components/Tonestruments.tsx](src/components/Tonestruments.tsx) - Featured TonePad section
-- [src/components/Footer.tsx](src/components/Footer.tsx) - Copyright and live Stockholm time
-- [src/index.css](src/index.css) - Global Urbanist import, OKLCH theme tokens, base styles
-- [tailwind.config.ts](tailwind.config.ts) - Tailwind token mappings and animation setup
-- [design.md](design.md) - Locked Hallmark design system for future UI work
+## Stack
 
-## Local Development
+React 18, TypeScript, Vite, Tailwind CSS, React Router. Analytics go through a Supabase edge function (`track-analytics`). They're disabled on localhost, and page views are recorded for every public route.
+
+## Develop
 
 ```bash
 npm install
-npm run dev
+npm run dev      # http://localhost:8080
 npm run build
 npm run lint
 ```
 
-## Routes
-
-- `/` - Public portfolio
-- `/analytics` - Private analytics dashboard
-- `/analytics/login` - Analytics login
-- `*` - Not found page
-
-## Deployment
-
-The site is intended for GitHub Pages at `hdparmar.github.io`.
-
-## License
+Pushing to `main` builds and deploys to GitHub Pages via `.github/workflows/deploy.yml`. `public/404.html` redirects deep links back into the single-page app.
 
 © 2026 Harshdeep Parmar. All rights reserved.

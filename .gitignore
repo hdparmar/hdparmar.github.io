@@ -37,3 +37,7 @@ skills-lock.json
 repo-state-*.md
 design.md
 
+
+# Private: writing guide and unpublished drafts (drafts only show in `npm run dev`)
+WRITING-GUIDE.md
+src/content/drafts/
