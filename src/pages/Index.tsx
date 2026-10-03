@@ -29,7 +29,11 @@ const Index = () => {
             <a href="https://tonestruments.se" target="_blank" rel="noopener noreferrer" className="text-link">
               Nadilo
             </a>
-            , a game that teaches beat-making by ear, and learning embedded Linux on a RISC-V Milk-V Duo.
+            , a game that teaches beat-making by ear, and tinkering with embedded Linux on a{" "}
+            <a href="https://milkv.io/duo" target="_blank" rel="noopener noreferrer" className="text-link">
+              Milk-V Duo
+            </a>
+            , a tiny edge board with a RISC-V core.
           </p>
           <p className="text-muted-foreground">I also shoot film and write.</p>
           <figure className="border-l border-accent/60 pl-4">
