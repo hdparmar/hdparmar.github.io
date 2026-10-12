@@ -75,7 +75,7 @@ export const sides: Side[] = [
         id: "B2",
         title: "Tradi-fusion",
         year: "2024",
-        href: "https://github.com/hdparmar/Tradifusion",
+        href: "https://hdparmar.github.io/Tradifusion/",
         body: "Riffusion fine-tuned on Irish traditional music. My KTH thesis.",
       },
       {
