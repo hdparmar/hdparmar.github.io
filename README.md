@@ -26,7 +26,7 @@ Images live in `public/photographs/` (1600px) and `public/photographs/thumbs/` (
 
 ## Design
 
-"Edge Print": warm paper and ink, Instrument Sans for text, IBM Plex Mono in burnt orange for frame numbers and metadata, a film-edge strip of frame numbers down the left on wide screens, and a footer photograph (Idrefjäll, Minolta 505si) that fades into the page. Light and dark themes, a single readable column, and layouts that stack on a phone.
+"Edge Print": limewash white and indigo ink (indigo night in dark mode), Instrument Sans for text, IBM Plex Mono in cobalt for frame numbers and metadata, a film-edge strip of frame numbers down the left on wide screens, and a footer photograph (Idrefjäll, Minolta 505si) that fades into the page. Light and dark themes, a single readable column, and layouts that stack on a phone.
 
 ## Stack
 

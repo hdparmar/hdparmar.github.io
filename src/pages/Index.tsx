@@ -80,8 +80,11 @@ const Index = () => {
             </div>
           </section>
         )}
+      </div>
 
-        <section aria-labelledby="photographs" className="mt-20 md:mt-24">
+      {/* The heading stays on the text column; the frames widen to the photo column. */}
+      <section aria-labelledby="photographs" className="mt-20 md:mt-24">
+        <div className="page-column">
           <SectionHeading
             id="photographs"
             frame={frames.photographs}
@@ -97,11 +100,11 @@ const Index = () => {
           >
             Photographs
           </SectionHeading>
-          <div className="mt-5">
-            <PhotoStrip />
-          </div>
-        </section>
-      </div>
+        </div>
+        <div className="photo-column mt-5">
+          <PhotoStrip />
+        </div>
+      </section>
     </main>
   );
 };

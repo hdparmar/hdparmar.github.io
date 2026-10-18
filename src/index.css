@@ -1,4 +1,4 @@
-/* Edge Print: warm paper, plain sans, film-edge mono in burnt orange.
+/* Edge Print: limewash white and indigo ink, plain sans, film-edge mono in cobalt.
  * Fonts: Instrument Sans (text), IBM Plex Mono (frame numbers, metadata). */
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap");
 
@@ -23,84 +23,84 @@
     --font-body: "Instrument Sans", "Helvetica Neue", system-ui, sans-serif;
     --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
 
-    --background: 95.6% 0.007 85;
-    --foreground: 21.5% 0.004 85;
+    --background: 97.6% 0.008 250;
+    --foreground: 24% 0.07 268;
 
-    --card: 93.5% 0.008 85;
-    --card-foreground: 21.5% 0.004 85;
+    --card: 94.8% 0.014 250;
+    --card-foreground: 24% 0.07 268;
 
-    --popover: 96.5% 0.006 85;
-    --popover-foreground: 21.5% 0.004 85;
+    --popover: 94.8% 0.014 250;
+    --popover-foreground: 24% 0.07 268;
 
-    --primary: 21.5% 0.004 85;
-    --primary-foreground: 95.6% 0.007 85;
+    --primary: 24% 0.07 268;
+    --primary-foreground: 97.6% 0.008 250;
 
-    --secondary: 91.5% 0.008 85;
-    --secondary-foreground: 21.5% 0.004 85;
+    --secondary: 92.5% 0.016 250;
+    --secondary-foreground: 24% 0.07 268;
 
-    --muted: 91.5% 0.008 85;
-    --muted-foreground: 46% 0.012 80;
+    --muted: 92.5% 0.016 250;
+    --muted-foreground: 48% 0.05 262;
 
-    --accent: 52% 0.13 45;
-    --accent-foreground: 97% 0.01 80;
+    --accent: 49% 0.18 258;
+    --accent-foreground: 98% 0.01 250;
 
     --destructive: 55% 0.21 25;
     --destructive-foreground: 97% 0.018 75;
 
-    --border: 87.5% 0.013 85;
-    --input: 87.5% 0.013 85;
-    --ring: 52% 0.13 45;
+    --border: 88% 0.025 255;
+    --input: 88% 0.025 255;
+    --ring: 49% 0.18 258;
 
-    --sidebar-background: 93.5% 0.008 85;
-    --sidebar-foreground: 21.5% 0.004 85;
-    --sidebar-primary: 21.5% 0.004 85;
-    --sidebar-primary-foreground: 95.6% 0.007 85;
-    --sidebar-accent: 91.5% 0.008 85;
-    --sidebar-accent-foreground: 21.5% 0.004 85;
-    --sidebar-border: 87.5% 0.013 85;
-    --sidebar-ring: 52% 0.13 45;
+    --sidebar-background: 94.8% 0.014 250;
+    --sidebar-foreground: 24% 0.07 268;
+    --sidebar-primary: 24% 0.07 268;
+    --sidebar-primary-foreground: 97.6% 0.008 250;
+    --sidebar-accent: 92.5% 0.016 250;
+    --sidebar-accent-foreground: 24% 0.07 268;
+    --sidebar-border: 88% 0.025 255;
+    --sidebar-ring: 49% 0.18 258;
 
     --radius: 0.375rem;
   }
 
-  /* Dark: soft graphite rather than black, warm off-white ink, the same burnt orange lifted. */
+  /* Dark: indigo night rather than black, cool white ink, the cobalt lifted to cornflower. */
   .dark {
-    --background: 23% 0.005 250;
-    --foreground: 92.5% 0.006 85;
+    --background: 18.5% 0.04 268;
+    --foreground: 93% 0.012 250;
 
-    --card: 26.5% 0.006 250;
-    --card-foreground: 92.5% 0.006 85;
+    --card: 22.5% 0.045 268;
+    --card-foreground: 93% 0.012 250;
 
-    --popover: 26.5% 0.006 250;
-    --popover-foreground: 92.5% 0.006 85;
+    --popover: 22.5% 0.045 268;
+    --popover-foreground: 93% 0.012 250;
 
-    --primary: 92.5% 0.006 85;
-    --primary-foreground: 23% 0.005 250;
+    --primary: 93% 0.012 250;
+    --primary-foreground: 18.5% 0.04 268;
 
-    --secondary: 30% 0.007 250;
-    --secondary-foreground: 92.5% 0.006 85;
+    --secondary: 26% 0.045 268;
+    --secondary-foreground: 93% 0.012 250;
 
-    --muted: 30% 0.007 250;
-    --muted-foreground: 74% 0.008 85;
+    --muted: 26% 0.045 268;
+    --muted-foreground: 72% 0.035 255;
 
-    --accent: 72% 0.115 52;
-    --accent-foreground: 20% 0.02 60;
+    --accent: 74% 0.12 245;
+    --accent-foreground: 18% 0.04 268;
 
     --destructive: 58% 0.2 25;
     --destructive-foreground: 96% 0.017 75;
 
-    --border: 36% 0.007 250;
-    --input: 36% 0.007 250;
-    --ring: 72% 0.115 52;
+    --border: 31% 0.045 266;
+    --input: 31% 0.045 266;
+    --ring: 74% 0.12 245;
 
-    --sidebar-background: 26.5% 0.006 250;
-    --sidebar-foreground: 92.5% 0.006 85;
-    --sidebar-primary: 92.5% 0.006 85;
-    --sidebar-primary-foreground: 23% 0.005 250;
-    --sidebar-accent: 30% 0.007 250;
-    --sidebar-accent-foreground: 92.5% 0.006 85;
-    --sidebar-border: 36% 0.007 250;
-    --sidebar-ring: 72% 0.115 52;
+    --sidebar-background: 22.5% 0.045 268;
+    --sidebar-foreground: 93% 0.012 250;
+    --sidebar-primary: 93% 0.012 250;
+    --sidebar-primary-foreground: 18.5% 0.04 268;
+    --sidebar-accent: 26% 0.045 268;
+    --sidebar-accent-foreground: 93% 0.012 250;
+    --sidebar-border: 31% 0.045 266;
+    --sidebar-ring: 74% 0.12 245;
   }
 }
 
@@ -193,14 +193,15 @@
     padding-inline: 24px;
   }
 
+  /* Wider than the text column so photographs read at a proper size on a desktop. */
   .photo-column {
     width: 100%;
-    max-width: 60rem;
+    max-width: 72rem;
     margin-inline: auto;
     padding-inline: 24px;
   }
 
-  /* Links inside the public site: quiet underline that warms on hover. */
+  /* Links inside the public site: quiet underline that turns cobalt on hover. */
   .site a {
     text-decoration-line: underline;
     text-decoration-color: oklch(var(--muted-foreground) / 0.4);
@@ -248,7 +249,7 @@
     word-spacing: 0.3em;
   }
 
-  /* Selected work: the active face of the coin is underlined in orange. */
+  /* Selected work: the active face of the coin is underlined in the accent. */
   .coin-face[aria-pressed="true"] {
     text-decoration: underline;
     text-decoration-color: oklch(var(--accent));
